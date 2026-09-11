@@ -1,15 +1,15 @@
 class Bitty < Formula
   desc "Bitty pre-alpha terminal workspace minimal correct terminal"
   homepage "https://github.com/bitty-terminal/bitty"
-  version "0.0.19"
+  version "0.0.20"
   license any_of: ["MIT", "Apache-2.0"]
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/bitty-terminal/bitty/releases/download/v0.0.19/bitty-x86_64-apple-darwin"
-    sha256 "662cc764f753f5562d9189d2b651aef9f25ed6f4be0a94188f39438c70756594"
+    url "https://github.com/bitty-terminal/bitty/releases/download/v0.0.20/bitty-x86_64-apple-darwin"
+    sha256 "2b33b44e31eb14a40554d279b2657123c9af49107a0cac4e13bcecae321ef08d"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/bitty-terminal/bitty/releases/download/v0.0.19/bitty-aarch64-apple-darwin"
-    sha256 "c95329691bf3395a89b06a44f53e3211c749944bc04fc95d6c1251955684efea"
+    url "https://github.com/bitty-terminal/bitty/releases/download/v0.0.20/bitty-aarch64-apple-darwin"
+    sha256 "304cc2d469c1d4015ad17dde5f30cbe4cb52484b811d78996042c986fedf3540"
   end
 
   def install
@@ -18,6 +18,6 @@ class Bitty < Formula
   end
 
   test do
-    assert_match "0.0.19", shell_output("#{bin}/bitty --version")
+    assert_match "0.0.20", shell_output("#{bin}/bitty --version")
   end
 end
