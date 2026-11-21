@@ -1,19 +1,19 @@
 class Bitty < Formula
   desc "Bitty pre-alpha terminal workspace minimal correct terminal"
   homepage "https://github.com/bitty-terminal/bitty"
-  version "0.0.46"
+  version "0.0.47"
   license any_of: ["MIT", "Apache-2.0"]
 
   # Primary download source: the R2-backed CDN. The same bytes are published
   # on GitHub Releases, documented here as the fallback:
-  #   https://github.com/bitty-terminal/bitty/releases/download/v0.0.46/bitty-x86_64-apple-darwin
-  #   https://github.com/bitty-terminal/bitty/releases/download/v0.0.46/bitty-aarch64-apple-darwin
+  #   https://github.com/bitty-terminal/bitty/releases/download/v0.0.47/bitty-x86_64-apple-darwin
+  #   https://github.com/bitty-terminal/bitty/releases/download/v0.0.47/bitty-aarch64-apple-darwin
   if OS.mac? && Hardware::CPU.intel?
-    url "https://cdn.bitty.run/releases/v0.0.46/bitty-x86_64-apple-darwin"
-    sha256 "3b329dc992f911e13d3a31673169e9d6a196d672e0b44d3d069af66c65761fa1"
+    url "https://cdn.bitty.run/releases/v0.0.47/bitty-x86_64-apple-darwin"
+    sha256 "e0202c8da121046237ecd7319cefdb430e5b4beb95475ed2fde741587514303f"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://cdn.bitty.run/releases/v0.0.46/bitty-aarch64-apple-darwin"
-    sha256 "5a19299342cb861137880ccd60e7131a4754e987fb1265b00e39dfa3d8516ae8"
+    url "https://cdn.bitty.run/releases/v0.0.47/bitty-aarch64-apple-darwin"
+    sha256 "17754c74bedd5d0373ccb00250dd1a54742f6544e7579f8d4210cc17e407e7a0"
   end
 
   def install
@@ -22,6 +22,6 @@ class Bitty < Formula
   end
 
   test do
-    assert_match "0.0.46", shell_output("#{bin}/bitty --version")
+    assert_match "0.0.47", shell_output("#{bin}/bitty --version")
   end
 end
